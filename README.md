@@ -1,84 +1,123 @@
-# Turborepo starter
+# 📜 YouTube AI Notes Converter  
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](README.md)
 
-This Turborepo starter is maintained by the Turborepo core team.
+Convert YouTube videos into AI-generated concise and structured notes! 🎥✨  
 
-## Using this example
+---------- 
+### Demo : [Here▶️](https://youtube-ai-notes.streamlit.app/)
+--- 
+### Demo Screenshot:
+![Screenshot 2025-03-04 152512](https://github.com/user-attachments/assets/e24dc4e7-8edd-4240-8227-860864c3c3c5)
+![Screenshot 2025-03-04 152602](https://github.com/user-attachments/assets/005c9c50-3cef-4555-80dc-60a2b3988dc0)
+![Screenshot 2025-03-04 152652](https://github.com/user-attachments/assets/f98ae7f2-41bf-4296-9613-11895debdefa)
 
-Run the following command:
 
-```sh
-npx create-turbo@latest
+
+----
+## 🚀 Features  
+- 🎙️ **Automatic Transcript Extraction** – Extracts video transcripts seamlessly.  
+- 📝 **AI-Generated Notes** – Converts transcripts into well-structured notes.  
+- 🎯 **Concise & Readable** – Eliminates unnecessary details for better clarity.  
+- 🔗 **Easy YouTube Link Processing** – Works best with copied video links.  
+
+## 🎯 How It Works  
+1️⃣ **Copy the YouTube Video Link** (Right-click & select _Copy link__).  
+2️⃣ **Paste the link** in the input field.  
+3️⃣ **Click "Generate AI Notes"** to extract and summarize the transcript.  
+4️⃣ **Enjoy structured notes** without watching the entire video! 🎉  
+
+---
+## 🛠️ Installation & Usage  
+### 1️⃣ Clone the Repository  
+```bash
+git clone https://github.com/Prarthana-Singh/YouTube-AI-Notes.git
+cd YouTube-AI-Notes-Converter
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
+### 2️⃣ Install Dependencies
+Create a virtual environment and install required packages:
+```bash
+pip install -r requirements.txt
 ```
 
-### Develop
-
-To develop all apps and packages, run the following command:
-
+### 3️⃣ Run the Application
+```bash
+streamlit run app.py
 ```
-cd my-turborepo
-pnpm dev
+---
+
+## 📄 Dependencies
+Ensure these packages are installed:
+1. streamlit
+2. youtube-transcript-api
+3. google-generativeai
+4. transformers
+5. torch
+
+## 🔑Add API keys to .env
+``` GOOGLE_API_KEY = "your-google-api-key" ```
+
+----
+
+### 🤝 Contributing
+We welcome contributions from everyone! Here's how you can help:
+
+
+##### 📌First-Time Contributors
+If you're new to open-source, follow these steps:
+
+1. Fork the repository (click the Fork button on GitHub)
+2. Clone your fork:
+```bash
+   git clone https://github.com/Prarthana-Singh/YouTube-AI-Notes-Converter.git
+```
+3. Create a new branch:
+```bash
+git checkout -b my-feature-branch
 ```
 
-### Remote Caching
-
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
-
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
-
+#### ➡️Making Changes
+* Make your changes (start with small fixes like documentation improvements)
+* Test your changes:
+```bash
+python tests.py
 ```
-cd my-turborepo
-npx turbo login
+* Commit with a clear message:
+```bash
+git commit -m "fix: correct typo in installation guide"
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
+#### ▶️Submitting a Pull Request
+* Push your changes:
+```bash
+git push origin my-feature-branch
 ```
-npx turbo link
-```
+* On GitHub, click "Compare & pull request"
+* Fill out the PR template explaining your changes
+---
 
-## Useful Links
+### Good First Issues
+Look for these labels:
+* good first issue - Great for beginners!
+* documentation - Help improve docs
+* bug - Fix reported issues
+---
 
-Learn more about the power of Turborepo:
+### ❓ Support
+* Got stuck? Open an issue with:
+* What you tried
+* What happened
+* Screenshots if applicable
+---
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+### 📜 License
+* This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+
+### 🙏 Acknowledgments
+* Google YouTube API
+* Contributors like you!
+
+**💖 Happy Contributing! Remember, every big project starts with small contributions.**
